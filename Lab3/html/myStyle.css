@@ -1,0 +1,58 @@
+body
+{
+    background-color: black;
+	background-image: url("img/Lion.jpg");
+	background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+	background-size: 700px 500px;
+}
+p 
+{
+    font-family: Calibri;
+    font-size: 20px;
+	color: white;
+}
+p.info 
+{
+    font-family: Calibri;
+    font-size: 20px;
+	color: gold;
+}
+p.ku 
+{
+    font-family: Calibri;
+    font-size: 20px;
+	color: lightskyblue;
+}
+h1 
+{
+    color: slategray;
+    text-align: left;
+	font-family: Calibri;
+    font-size: 80px;
+
+}
+h2 
+{
+    color: slategray;
+    text-align: left;
+	font-family: Calibri;
+    font-size: 35px;
+	
+}
+hr 
+{
+    width: 20%
+	position: left;
+}
+a
+{
+    color: gold;
+	text-decoration: underline;
+}
+a:visited
+{
+    color: lightgrey;
+	text-decoration: underline;
+} 

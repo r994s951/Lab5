@@ -1,0 +1,49 @@
+<html>
+  	<head>
+		<title>EECS 448 Lab 3</title>
+		<style></style> 
+	</head>
+<body>
+<h2>Slideshow</h2>
+<div class="Box" style="max-width:800px;position:relative">
+	<img class="Slideshow" src="img/KU.JPG" style="width:100%">
+	<img class="Slideshow" src="img/Land.jpg" style="width:100%">
+	<img class="Slideshow" src="img/Earth.jpg" style="width:100%">
+	<img class="Slideshow" src="img/AB.jpg" style="width:100%">
+	<img class="Slideshow" src="img/Cat.jpg" style="width:100%">
+</div>
+<div class="Arrows" style="max-width:200px;position:relative">
+	<button type="button" onclick="change(-1)">Go Left</button>
+	<button type="button" onclick="change(1)">Go Right</button>
+</div>
+<!--Help from w3 schools-->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function change(index) 
+{
+  showDivs(slideIndex += index);
+}
+
+function showDivs(index) 
+{
+	var i;
+	var x = document.getElementsByClassName("Slideshow");
+	if (index > x.length) 
+	{
+		slideIndex = 1
+	}
+	if (index < 1) 
+	{
+		slideIndex = x.length
+	}
+	for (i = 0; i < x.length; i++) 
+	{
+		x[i].style.display = "none";
+	}
+	x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>

