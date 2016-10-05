@@ -1,0 +1,42 @@
+body
+{
+    background-color: lightblue;
+}
+p 
+{
+    font-family: Calibri;
+    font-size: 22px;
+	color: white;
+	font-weight: bold;
+}
+p.other 
+{
+    font-family: Calibri;
+    font-size: 24px;
+	color: deepskyblue;
+}
+h1 
+{
+    color: slategray;
+    text-align: left;
+	font-family: Calibri;
+    font-size: 60px;
+
+}
+h2 
+{
+    color: slategray;
+    text-align: left;
+	font-family: Calibri;
+    font-size: 35px;
+	
+}
+h3 
+{
+    color: deepskyblue;
+    text-align: left;
+	font-family: Calibri;
+    font-size: 20px;
+	
+}
+

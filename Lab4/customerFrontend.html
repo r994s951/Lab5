@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Web Store</title>
+   <link href="Style.css" rel="stylesheet" type="text/css"/>
+	<script src="formChecker.js"></script>
+</head>
+<body>
+
+<h1>Web Store</h1>
+<h2>Rony's Random Clothing Store</h2>
+<h3>Get a random article of clothing....Randomly...From a Small Selection</h3>
+<hr width=60% align=left></hr>
+
+<form action="customerBackend.php" id="formA" method="post" >
+	<p class="other">Create an Account</p>
+
+	<p>Username - Email please!</p>
+	<input id="user" type="text" name="Username">
+
+	<p>Password - Write It Down!</p>
+	<input id="pass" type="password" name="Password">
+
+	<p></p>
+	<hr width=40% align=left></hr>
+	<p class="other">Enter Number Desired</p>
+	<p>Random Shirt - $25</p>
+	<input id="shirt" type="number" name="shirts" min="0" value="0">
+	<p>Random Pants - $20</p>
+	<input id="pant" type="number" name="pants" min="0" value="0">
+	<p>Random Hat  - $10</p>
+	<input id="hat" type="number" name="hats" min="0" value="0">
+	<p></p>
+	<hr width=40% align=left></hr>
+	
+	<p class="other">Shipping Type</p>
+
+	  <input id="free" type="radio" name="ship" value="free"> Free 7 Day Shipping<br>
+	  <input id="over" type="radio" name="ship" value="night"> $50.00 Overnight Shipping<br>
+	  <input id="three" type="radio" name="ship" value="day"> $5.00 Three day Shipping<br>
+
+	  <p></p>
+	  <input type="Reset" value="Reset">
+	  <p></p>
+	  <button style="width:20%" onclick="validate()">Submit</button>
+</form>
+</body>
+</html>
