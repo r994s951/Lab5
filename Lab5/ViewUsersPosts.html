@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>View Users Posts</title>
+</head>
+
+<body>
+
+<h1>View Users Posts</h1>
+<form action="ViewUsersPosts.php" id="form" method="post" >
+<?php 
+$mysqli = new mysqli("mysql.eecs.ku.edu", "rsingh", "Password123!", "rsingh");
+
+/* check connection */
+if ($mysqli->connect_errno) 
+{
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+$query="SELECT * FROM Users";
+$result=$mysqli->query($query);
+
+//Source http://www.w3schools.com/php/php_mysql_select.asp - Helped a little
+$i=1;
+
+echo "<select name = 'Username'>";
+while($row = mysqli_fetch_array($result))
+{
+	echo "<option value=".$row['user_id'].">";
+	echo  $row['user_id'];
+	echo "</option>";
+}
+echo "</select>";
+
+$mysqli->close();
+?>    
+<input type="submit">
+</form>
+</body>
+
+</html>
+ 

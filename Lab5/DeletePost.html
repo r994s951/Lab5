@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Delete Post</title>
+</head>
+
+<body>
+
+<h1>Delete Post</h1>
+<form action="DeletePost.php" id="form" method="post" >
+<?php 
+$mysqli = new mysqli("mysql.eecs.ku.edu", "rsingh", "Password123!", "rsingh");
+
+/* check connection */
+if ($mysqli->connect_errno) 
+{
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+$query="SELECT * FROM Posts";
+$result=$mysqli->query($query);
+
+//Source http://www.w3schools.com/php/php_mysql_select.asp - Helped a little
+
+echo "<table>";
+echo "<tr><th>Posts</th><th>Authors</th><th>Delete?</th></tr>";
+$x=1;
+while($row = mysqli_fetch_array($result))
+{
+	echo "<tr>";
+	echo "<td>";
+	echo $row['content'];
+	echo "</td>";
+	echo "<td>";
+	echo $row['author_id'];
+	echo "</td>";
+	echo "<td>";
+	echo "<input name='$x' type='checkbox'>";
+	echo "</td>";
+	echo "</tr>";
+	$x++;
+}
+echo "</table>";
+$mysqli->close();
+?>    
+<input type="submit">
+</form>
+</body>
+
+</html>
+  
